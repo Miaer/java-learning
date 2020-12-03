@@ -1,7 +1,6 @@
 package java8action.appc;
 
 import java8action.chap6.Dish;
-import lambdasinaction.chap6.*;
 
 import static java.util.stream.Collectors.*;
 import static java8action.chap6.Dish.menu;

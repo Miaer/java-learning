@@ -1,9 +1,12 @@
 package java8action.chap5;
 
 import java8action.chap4.Dish;
-import lambdasinaction.chap4.*;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import static java.util.stream.Collectors.toList;
 
 public class Mapping{
@@ -23,11 +26,15 @@ public class Mapping{
                                          .collect(toList());
         System.out.println(wordLengths);
 
+        // map
+        List<String[]> collect = words.stream().map(word -> word.split("")).distinct().collect(toList());
+
+        System.out.println(collect);
         // flatMap
-        words.stream()
-                 .flatMap((String line) -> Arrays.stream(line.split("")))
-                 .distinct()
-                 .forEach(System.out::println);
+        Stream<String> distinct = words.stream()
+                .flatMap((String line) -> Arrays.stream(line.split("")))
+                .distinct();
+        distinct.forEach(System.out::println);
 
         // flatMap
         List<Integer> numbers1 = Arrays.asList(1,2,3,4,5);

@@ -1,8 +1,8 @@
 package java8action.chap5;
-import java8action.chap4.Dish;
-import lambdasinaction.chap4.*;
 
-import java.util.*;
+import java8action.chap4.Dish;
+
+import java.util.Optional;
 
 import static java8action.chap4.Dish.menu;
 

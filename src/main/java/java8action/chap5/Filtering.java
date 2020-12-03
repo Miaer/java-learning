@@ -1,8 +1,10 @@
 package java8action.chap5;
-import java8action.chap4.Dish;
-import lambdasinaction.chap4.*;
 
-import java.util.*;
+import java8action.chap4.Dish;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static java.util.stream.Collectors.toList;
 
 public class Filtering{

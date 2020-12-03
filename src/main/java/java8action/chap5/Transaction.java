@@ -25,6 +25,7 @@ public class Transaction{
 		return this.value;
 	}
 	
+	@Override
 	public String toString(){
 	    return "{" + this.trader + ", " +
 	           "year: "+this.year+", " +
