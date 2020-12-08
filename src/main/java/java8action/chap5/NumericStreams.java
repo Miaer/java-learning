@@ -1,6 +1,5 @@
 package java8action.chap5;
 import java8action.chap4.Dish;
-import lambdasinaction.chap4.*;
 
 import java.util.stream.*;
 import java.util.*;

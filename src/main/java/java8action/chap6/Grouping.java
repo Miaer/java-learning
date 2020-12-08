@@ -24,21 +24,31 @@ public class Grouping {
         System.out.println("Caloric levels by type: " + caloricLevelsByType());
     }
 
+    /**
+     * 按照类型进行分组，单层分组。分组的key是Dish.Type，value是有该type的数据
+     * @return
+     */
     private static Map<Dish.Type, List<Dish>> groupDishesByType() {
         return menu.stream().collect(groupingBy(Dish::getType));
     }
 
+    /**
+     * 二级分组，
+     * @return
+     */
     private static Map<Dish.Type, List<String>> groupDishNamesByType() {
         return menu.stream().collect(groupingBy(Dish::getType, mapping(Dish::getName, toList())));
     }
 
     private static Map<Dish.Type, Set<String>> groupDishTagsByType() {
-        return menu.stream().collect(groupingBy(Dish::getType, flatMapping(dish -> dishTags.get( dish.getName() ).stream(), toSet())));
+//        menu.stream().collect(groupingBy(Dish::getType, flatMapping(dish -> dishTags.get( dish.getName() ).stream(), toSet())));
+        return null;
     }
 
     private static Map<Dish.Type, List<Dish>> groupCaloricDishesByType() {
 //        return menu.stream().filter(dish -> dish.getCalories() > 500).collect(groupingBy(Dish::getType));
-        return menu.stream().collect(groupingBy(Dish::getType, filtering(dish -> dish.getCalories() > 500, toList())));
+//        menu.stream().collect(groupingBy(Dish::getType, filtering(dish -> dish.getCalories() > 500, toList())))
+        return null;
     }
 
     private static Map<CaloricLevel, List<Dish>> groupDishesByCaloricLevel() {
