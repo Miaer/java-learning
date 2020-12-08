@@ -1,7 +1,10 @@
 package java8action.chap5;
+
 import java8action.chap4.Dish;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 public class Reducing{
 

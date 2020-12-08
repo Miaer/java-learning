@@ -1,7 +1,8 @@
 package java8action.chap5;
+
 import java8action.chap4.Dish;
 
-import java.util.*;
+import java.util.Optional;
 
 import static java8action.chap4.Dish.menu;
 
